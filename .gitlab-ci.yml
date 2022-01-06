@@ -15,6 +15,7 @@ Code-Scan:
   image: sourceguard/sourceguard-cli:latest
   script:
     - /sourceguard-cli -s . -nc -D
+  allow_failure: true
 
 DockerBuild:
   stage: build
