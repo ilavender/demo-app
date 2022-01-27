@@ -11,16 +11,11 @@ stages:
   - tests
   
 Code-Scan:
-  stage: tests
+  stage: build
   image: sourceguard/sourceguard-cli:latest
   script:
-    - /sourceguard-cli -s . -nc -D -bd -1
-
-Image-Scan:
-  stage: tests
-  image: sourceguard/sourceguard-cli:latest
-  script:
-    - /sourceguard-cli -i release/demo-app-image.tar
+    - /sourceguard-cli -s . -nc -D
+  allow_failure: true
 
 DockerBuild:
   stage: build
@@ -33,3 +28,9 @@ DockerBuild:
     - docker build -t cpx/demo-app:latest .
     - mkdir release 
     - docker save cpx/demo-app:latest -o release/demo-app-image.tar
+
+Image-Scan:
+  stage: tests
+  image: sourceguard/sourceguard-cli:latest
+  script:
+    - /sourceguard-cli -i release/demo-app-image.tar
