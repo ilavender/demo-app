@@ -12,7 +12,7 @@ s3transfer==0.1.10
 six==1.10.0
 cryptography==1.5.2
 daphne==1.0.5
-Django==1.11.22
+Django==2.2.27
 django-debug-toolbar==1.6
 django-eventtools==0.9.10
 django-redis==4.6.0
