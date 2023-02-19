@@ -10,9 +10,10 @@ python-dateutil==2.6.0
 python-nmap==0.6.1
 s3transfer==0.1.10
 six==1.10.0
-cryptography==1.5.2
+cryptography==39.0.1
 daphne==1.0.5
 Django==1.11.22
 django-debug-toolbar==1.6
 django-eventtools==0.9.10
 django-redis==4.6.0
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
