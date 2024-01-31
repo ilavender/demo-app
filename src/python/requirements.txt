@@ -10,7 +10,7 @@ python-dateutil==2.6.0
 python-nmap==0.6.1
 s3transfer==0.1.10
 six==1.10.0
-cryptography==1.5.2
+cryptography==42.0.2
 daphne==1.0.5
 Django==1.11.22
 django-debug-toolbar==1.6
